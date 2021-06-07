@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Placement Hub</title>
+</head>
+<style>
+    html {
+        height: 100%;
+    }
+    
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        opacity: 1;
+    }
+    
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        height: 50px;
+    }
+    
+    .container {
+        margin: 2%;
+        margin-top: 0% !important;
+    }
+    
+    .card1 {
+        width: 500px;
+        height: 350px;
+    }
+    
+    .card2 {
+        width: 1050px;
+        height: 350px;
+    }
+    
+    .full-height {
+        height: 100%;
+    }
+    
+    .white {
+        color: white;
+    }
+    
+    .left-end {
+        margin-left: auto;
+    }
+    
+    .small-font {
+        font-size: 5px;
+    }
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .para {
+        background-color: #ACB9C2;
+        opacity: 0.7;
+        margin-left: 2%;
+    }
+    
+    .card-body1 {
+        margin-left: auto;
+    }
+</style>
+
+<body background="{{ url_for('static', filename='images/bg.jpg') }}">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><b>Placement Hub</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">NEWS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">CHANNELS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">PRACTICE</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">WEBINARS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">SKILL TEST</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">JOBS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">EVENTS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">JOIN COMMUNITY</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row justify-content-end">
+            <form action="/logout" method="POST">
+                <input type="submit" value="Logout" class="btn btn-danger mr-2">
+            </form>
+        </div>
+    </nav>
+
+    <div class="row" style="height: 100%;">
+        <!-- Menu -->
+        <div class="col-sm-2 bg-dark" style="background-color: #ACB9C2;height: 100%;">
+            <div class="nav flex-column nav-pills mt-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-10">
+            <div class="tab-content" id="v-pills-tabContent">
+                <!-- Home -->
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <!-- Body -->
+                    <div class="row justify-content-center mt-5 mb-5">
+                        <h4 style="color: black;background-color: #E2D9D0;opacity: 0.7;">Your Key to success is just a click away</h4>
+                    </div>
+
+                    <div class="row mt-5 ml-2">
+                        <div class="col-sm-12">
+                            <div class="card card2" style="opacity: 0.7;">
+                                <div class="card-body" style="display: flex;">
+                                    <div class="card1">
+                                        <p class="mt-4" style="font-weight: bold;">Placement Hub Profile is the most powerful tool you can use today to land a tech job. More than 100 top recruiters now use these profiles to make their hiring decisions.</p>
+                                        <p class="mt-3" style="font-weight: bold;">We want every programmer to have access to a tech profile and you can do so with just one click. We have a new point of contact - Upload Your Resume section. Don't let your eyes deceive you; this is no ordinary
+                                            section. All you have to do is upload your resume and your tech profile will be automatically created out of that. You can now be noticed by top recruiters with a single click.</p>
+                                    </div>
+                                    <div class="card1" style="display: flex;">
+                                        <form class="mt-4" enctype="multipart/form-data" action="/UploadFile" method="POST">
+                                            {% if not success %}
+                                            <h6 style="font-weight: bold;">Upload your resume</h6>
+                                            <input type="file" name="resume" id="resume">
+                                            <input type="submit" name="upload" id="upload" value="Upload"> {% endif %}
+                                            <!-- Error Message -->
+                                            {% if error %}
+                                            <div class="row mt-3 ml-1">
+                                                <p><strong>Message</strong>: {{error}}</p>
+                                            </div>
+                                            {% endif %}
+                                            <!-- Message -->
+                                            {% if message %}
+                                            <div class="row mt-1 ml-1">
+                                                <p style="margin-bottom: 0%;"><strong>Message</strong>: {{message}}</p>
+                                            </div>
+                                            {% endif %}
+                                            <!-- On success File Upload -->
+                                            {% if success %}
+                                            <p class="mt-1">Your resume looks <strong>Good!</strong></p>
+                                            <!-- Suggest Skills -->
+                                            {% if skills %}
+                                            <p>Below are some suggested skills you can learn and add to resume</p>
+                                            {% endif %} {% for skill in skills%}
+                                            <p style="margin-bottom: 0%;" class="ml-1">{{skill.suggest}}</p>
+                                            <div class="progress">
+                                                <div class="progress-bar ml-1" role="progressbar" style="width: {{skill.value}}%" aria-valuenow={{skill.value}} aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            {% endfor %} {% endif %}
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu -->
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Placement Cell</title>
+</head>
+<style>
+    html {
+        height: 100%;
+    }
+    
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        height: 50px;
+    }
+    
+    .container {
+        margin: 2%;
+        margin-top: 0% !important;
+    }
+    
+    .full-height {
+        height: 100%;
+    }
+    
+    .white {
+        color: white;
+    }
+    
+    .left-end {
+        margin-left: auto;
+    }
+    
+    .small-font {
+        font-size: 5px;
+    }
+    
+    .nav-link {
+        color: white;
+    }
+</style>
+
+<body class="bg-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><b>Placement Hub</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">NEWS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">CHANNELS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">PRACTICE</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">WEBINARS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">SKILL TEST</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">JOBS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">EVENTS</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">JOIN COMMUNITY</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row justify-content-end">
+            <form action="/logout" method="POST">
+                <input type="submit" value="Logout" class="btn btn-danger mr-2">
+            </form>
+        </div>
+    </nav>
+
+    <div class="row" style="height: 100%;">
+        <!-- Menu -->
+        <div class="col-sm-2 bg-dark" style="background-color: #ACB9C2;height: 100%;">
+            <div class="nav flex-column nav-pills mt-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-10" style="height: 100%;">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <!-- Body -->
+                    {% for resume in resumes %}
+                    <div class="row justify-content-center">
+                        <div class="card w-100">
+                            <div class="card-body" style="margin:2%;border:solid;">
+                                <div class="container ml-0">
+                                    <div class="row">
+                                        <h6>Name : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.name}}</label>
+                                        <h6 class="left-end">Mobile : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.phone}}</label>
+                                    </div>
+                                    <div class="row">
+                                        <h6>LinkedIn : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.linkedin}}</label>
+                                        <h6 class="left-end">Email : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.email}}</label>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <h6>Degree : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.degree}}</label>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <h6>Certifications : </h6>
+                                        <p class="ml-1" style="font-size: 14px;">{{resume.certifications}}</p>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <h6>Designation : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.designation}}</label>
+
+                                        <h6 class="left-end">Experience : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.total_exp}}</label>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <h6>Skills : </h6>
+                                        <p class="ml-1" style="font-size: 14px;word-wrap: break-word;">{{resume.skills}}</p>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <h6>Projects : </h6>
+                                        <p class="ml-1" style="font-size: 14px;">{{resume.projects}}</p>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <h6>Accomplishment : </h6>
+                                        <p class="ml-1" style="font-size: 14px;">{{resume.accomplishments}}</p>
+                                    </div>
+
+                                    <div class="row mt-2 justify-content-end">
+                                        <h6>GRADE : </h6>
+                                        <label class="ml-1" style="font-size: 14px;">{{resume.grade}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu -->
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
